@@ -10,10 +10,11 @@ BUTTON_TEXT = dict([
 
 def test_button_add_to_card(browser, language):
 
-    if (language not in BUTTON_TEXT.keys()):
+    # Проверяем что язык из списка ожидаемых
+    if language not in BUTTON_TEXT.keys():
         raise pytest.UsageError(f"parameter --language not in one of: {','.join(BUTTON_TEXT)}")
 
-    link = f'http://selenium1py.pythonanywhere.com/{language}/catalogue/coders-at-work_207'
+    link = f'http://selenium1py.pythonanywhere.com/catalogue/coders-at-work_207'
     browser.get(link)
 
     time.sleep(10)  # больше не стал делать
