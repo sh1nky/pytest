@@ -19,6 +19,6 @@ def test_button_add_to_card(browser, language):
 
     time.sleep(10)  # больше не стал делать
 
-    button = browser.find_element_by_css_selector("button.btn-add-to-basket")
+    button = browser.find_element_by_css_selector('button.btn-add-to-basket')
 
-    assert button.text == BUTTON_TEXT[language]
+    assert button.text == BUTTON_TEXT[language], 'No valid text on button: "add to card"'
